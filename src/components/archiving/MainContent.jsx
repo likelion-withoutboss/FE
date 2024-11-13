@@ -1,4 +1,6 @@
+import { useState } from "react";
 import ArchivingCard from "./ArchivingCard";
+import SelectSeason from "./SelectSeason";
 
 export default function MainContent() {
   const projectList = [
@@ -47,18 +49,38 @@ export default function MainContent() {
     },
   ];
 
+  const [selectedSeason, setSelectedSeason] = useState("전체");
+
+  const handleSelectedSeason = (season) => {
+    console.log(selectedSeason.split("기")[0]);
+    setSelectedSeason(season);
+  };
+
+  const filteredProjects =
+    selectedSeason === "전체"
+      ? projectList
+      : projectList.filter(
+          (project) => project.season === Number(selectedSeason.split("기")[0])
+        );
+
   return (
-    <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 justify-items-center">
-      {projectList.map((project, index) => (
-        <ArchivingCard
-          key={index} // 고유한 키 추가
-          title={project.title}
-          description={project.description}
-          season={project.season}
-          skill={project.skill}
-          like={project.like}
-        />
-      ))}
+    <div>
+      <SelectSeason
+        selectedSeason={selectedSeason}
+        onHandleSelectSeason={handleSelectedSeason}
+      />
+      <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 justify-items-center">
+        {filteredProjects.map((project, index) => (
+          <ArchivingCard
+            key={index} // 고유한 키 추가
+            title={project.title}
+            description={project.description}
+            season={project.season}
+            skill={project.skill}
+            like={project.like}
+          />
+        ))}
+      </div>
     </div>
   );
 }
