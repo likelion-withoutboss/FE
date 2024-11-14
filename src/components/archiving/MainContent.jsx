@@ -52,7 +52,6 @@ export default function MainContent() {
   const [selectedSeason, setSelectedSeason] = useState("전체");
 
   const handleSelectedSeason = (season) => {
-    console.log(selectedSeason.split("기")[0]);
     setSelectedSeason(season);
   };
 

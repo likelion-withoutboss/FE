@@ -19,7 +19,6 @@ export default function ArchivingCard({
           src={arch_test}
           alt="x"
         />
-        {/* cx 설치해서 색깔 바꿔라 */}
         <div
           className={cx(
             { "bg-amber-500 hover:bg-amber-600": like }, // like가 true일 때 bg-amber-500을 적용

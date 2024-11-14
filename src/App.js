@@ -9,6 +9,7 @@ import Administration from "./components/Administrations";
 import HeroSection from "./components/HeroSection";
 import Archiving from "./pages/archiving";
 import Layout from "./components/Layout";
+import ArchivingDetail from "./pages/archivingDetail";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/archiving" element={<Archiving />} />
+          <Route path="/archiving/d" element={<ArchivingDetail />} />
+
           <Route path="/administrations" element={<Administration />} />
         </Routes>
       </Layout>
