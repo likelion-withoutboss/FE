@@ -10,14 +10,14 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-4xl mx-auto">
-      <div className="min-h-screen bg-gray-100 font-korean">
+    <div className="container min-h-screen bg-grey-200 flex flex-col  max-w-4xl mx-auto p-5">
+      
         <nav
-          className={`bg-orange-500 p-2 rounded-lg shadow-md max-w-5xl mx-auto mt-4 fixed top-0 left-0 right-0 z-10 transition-all ${
+          className={`bg-orange-500 p-2 rounded-lg shadow-md max-w-4xl mx-auto mt-4 fixed top-0 left-0 right-0 z-10 transition-all ${
             isNavSticky ? "shadow-lg" : ""
           }`}
         >
-          <div className="container mx-auto flex justify-between items-center">
+          <div className=" mx-auto flex justify-between items-center">
             <Link to="/" className="text-xl text-white">
               <span className="text-2xl font-bold">네비</span>
               <span className="text-2xl font-bold text-yellow-300">바</span>
@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
         <div className="mt-16">{children}</div>{" "}
         {/* children을 표시하는 부분 추가 */}
       </div>
-    </div>
+   
   );
 };
 
