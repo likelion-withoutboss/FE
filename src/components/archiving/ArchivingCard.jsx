@@ -2,6 +2,8 @@ import arch_test from "../../image/arch_test.avif";
 import { FaThumbsUp } from "react-icons/fa6";
 import { FaRegThumbsUp } from "react-icons/fa6";
 import cx from "classnames";
+import { FaReact, FaNodeJs, FaSwift } from "react-icons/fa";
+import { SiDjango, SiSpring } from "react-icons/si";
 
 export default function ArchivingCard({
   title,
@@ -11,7 +13,7 @@ export default function ArchivingCard({
   like,
 }) {
   return (
-    <div className="w-80 h-80 p-4 border-2 rounded-2xl  space-y-4 shadow-lg bg-white">
+    <div className="w-80 h-auto p-4 border-2 rounded-2xl  space-y-4 shadow-lg bg-white">
       {/* 프로젝트 소개 */}
       <div className="relative">
         <img
@@ -30,7 +32,7 @@ export default function ArchivingCard({
       </div>
       <div className="flex flex-col space-y-2">
         <div className="flex items-center space-x-2">
-          <p className="font-bold text-lg">{title}</p>
+          <p className="">{title}</p>
           <p className="text-light text-sm">{season}기</p>
         </div>
         <div className="text-gray-700 truncate ">{description}</div>
@@ -38,9 +40,13 @@ export default function ArchivingCard({
           {skill.map((skillItem, index) => (
             <div
               key={index}
-              className="rounded-lg p-1 bg-gray-200 text-sm text-black w-auto"
+              className="rounded-lg p-2 bg-gray-200 text-sm text-black w-auto"
             >
-              {skillItem}
+              {skillItem === "react" && <FaReact />}
+              {skillItem === "spring" && <SiSpring />}
+              {skillItem === "nodejs" && <FaNodeJs />}
+              {skillItem === "swift" && <FaSwift />}
+              {skillItem === "django" && <SiDjango />}
             </div>
           ))}
         </div>
