@@ -70,7 +70,7 @@ export default function MainContent() {
         selectedSeason={selectedSeason}
         onHandleSelectSeason={handleSelectedSeason}
       />
-      <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 justify-items-center">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
         {filteredProjects.map((project, index) => (
           <ArchivingCard
             key={index} // 고유한 키 추가
