@@ -13,7 +13,7 @@ export default function ArchivingCard({
   like,
 }) {
   return (
-    <div className="w-80 h-auto p-4 border-2 rounded-2xl  space-y-4 shadow-lg bg-white">
+    <div className="w-80 h-auto p-4 border-2 rounded-2xl  space-y-4 shadow-lg bg-white cursor-pointer hover:-translate-y-2 hover:duration-500">
       {/* 프로젝트 소개 */}
       <div className="relative">
         <img
