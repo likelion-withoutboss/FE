@@ -63,7 +63,7 @@ export default function MainContent() {
         );
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto ">
       <Title text="Project" />
 
       <SelectSeason

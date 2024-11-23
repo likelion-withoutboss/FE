@@ -104,7 +104,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </nav>
-      <div className="mt-16">{children}</div>{" "}
+      <div className="mt-16 p-5">{children}</div>{" "}
       {/* children을 표시하는 부분 추가 */}
     </div>
   );

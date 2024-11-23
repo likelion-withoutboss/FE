@@ -16,7 +16,7 @@ function SeasonSection({ text, selectedSeason, onHandleSelectSeason }) {
 
 export default function SelectSeason({ selectedSeason, onHandleSelectSeason }) {
   return (
-    <div className="flex space-x-5 mb-5">
+    <div className="flex space-x-5 mb-5 max-w-4xl mx-auto">
       <SeasonSection
         text="전체"
         selectedSeason={selectedSeason}
