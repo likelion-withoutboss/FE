@@ -9,7 +9,7 @@ export default function MainContent() {
       description:
         "도를 닦자의 소개입니다 글씨가 길어지면 어캐되지 .. 제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ",
       season: 11,
-      skill: ["spring", "react"],
+      skill: ["spring", "react", "swift"],
       like: false,
     },
     {
