@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ArchivingCard from "./ArchivingCard";
 import SelectSeason from "./SelectSeason";
-
+import Title from "../Title.tsx";
 export default function MainContent() {
   const projectList = [
     {
@@ -64,6 +64,8 @@ export default function MainContent() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <Title text="Project" />
+
       <SelectSeason
         selectedSeason={selectedSeason}
         onHandleSelectSeason={handleSelectedSeason}

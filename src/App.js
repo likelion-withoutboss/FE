@@ -9,7 +9,7 @@ import Layout from "./components/Layout";
 import ArchivingDetail from "./pages/archivingDetail";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Members from "./components/Members";
-import About from "./about/About";
+import About from "./components/about/About";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

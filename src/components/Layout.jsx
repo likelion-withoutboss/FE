@@ -35,6 +35,8 @@ const Layout = ({ children }) => {
           </Link>
           <div className="md:flex hidden ">
             <ul className="flex flex-row space-x-4">
+              <NavContent link="about" text="커리큘럼" />
+
               <NavContent link="announcements" text="공지사항" />
               <NavContent link="archiving" text="프로젝트" />
             </ul>
