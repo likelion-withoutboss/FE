@@ -1,11 +1,7 @@
 import arch_test from "../../image/arch_test.avif";
-import {
-  FaReact,
-  FaNodeJs,
-  FaSwift,
-  FaGithub,
-  FaSquareInstagram,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaSwift, FaGithub, FaLink } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+
 import { SiDjango, SiSpring } from "react-icons/si";
 
 export default function MainContent() {
@@ -25,7 +21,8 @@ export default function MainContent() {
         {skill.map((skillItem, index) => (
           <div
             key={index}
-            className="rounded-lg p-2 bg-gray-200 text-sm text-black w-auto"
+            data-tip={skillItem}
+            className="tooltip rounded-lg p-2 bg-g  ray-200 text-sm text-black w-auto"
           >
             {skillItem === "react" && <FaReact color="blue" size="30" />}
             {skillItem === "spring" && <SiSpring color="green" size="26" />}
@@ -48,7 +45,11 @@ export default function MainContent() {
         ))}
       </div>
       <p className="font-bold text-2xl">🔗 링크</p>
-      <div className="flex flex-wrap space-x-2"></div>
+      <div className="flex flex-wrap space-x-2">
+        <FaGithub size="26" />
+        <FaSquareInstagram size="26" />
+        <FaLink size="26" />
+      </div>
     </div>
   );
 }

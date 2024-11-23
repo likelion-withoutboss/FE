@@ -63,7 +63,7 @@ export default function MainContent() {
         );
 
   return (
-    <div>
+    <div className="max-w-4xl mx-auto">
       <SelectSeason
         selectedSeason={selectedSeason}
         onHandleSelectSeason={handleSelectedSeason}
