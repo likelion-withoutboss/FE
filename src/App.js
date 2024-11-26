@@ -10,6 +10,8 @@ import ArchivingDetail from "./pages/archivingDetail";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Members from "./components/Members";
 import About from "./about/About";
+import Apply from "./components/Apply/Apply";
+import Login from "./components/Login/Login";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,6 +47,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/administrations" element={<Administration />} />
           <Route path="/members" element={<Members />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </Layout>
     </Router>

@@ -44,7 +44,7 @@ export default function About() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold mb-8 text-center text-orange-500">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold mb-8 text-center text-orange-500 p-5">
         <span className="text-orange-600">멋사</span> 커리큘럼
       </h1>
 

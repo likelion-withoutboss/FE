@@ -10,10 +10,10 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="container min-h-screen bg-grey-200 flex flex-col  max-w-4xl mx-auto p-5">
+    <div className="container min-h-screen text-black bg-gray-200 flex flex-col  max-w-4xl mx-auto p-5">
       
         <nav
-          className={`bg-orange-500 p-2 rounded-lg shadow-md max-w-4xl mx-auto mt-4 fixed top-0 left-0 right-0 z-10 transition-all ${
+          className={`bg-orange-500 p-2 rounded-lg shadow-md max-w-4xl mx-auto mt-4 fixed  top-0 left-0 right-0 z-10 transition-all opacity-70 ${
             isNavSticky ? "shadow-lg" : ""
           }`}
         >
