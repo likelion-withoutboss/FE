@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ArchivingCard from "./ArchivingCard";
 import SelectSeason from "./SelectSeason";
-
+import Title from "../Title.tsx";
 export default function MainContent() {
   const projectList = [
     {
@@ -9,7 +9,7 @@ export default function MainContent() {
       description:
         "도를 닦자의 소개입니다 글씨가 길어지면 어캐되지 .. 제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ제발 어캐되지ㅁㄴ엄ㄴ오ㅓ미너인멍ㅁㄴㅇㄴㅁ",
       season: 11,
-      skill: ["spring", "react"],
+      skill: ["spring", "react", "swift"],
       like: false,
     },
     {
@@ -63,12 +63,14 @@ export default function MainContent() {
         );
 
   return (
-    <div>
+    <div className="max-w-4xl mx-auto ">
+      <Title text="Project" />
+
       <SelectSeason
         selectedSeason={selectedSeason}
         onHandleSelectSeason={handleSelectedSeason}
       />
-      <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 justify-items-center">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
         {filteredProjects.map((project, index) => (
           <ArchivingCard
             key={index} // 고유한 키 추가
