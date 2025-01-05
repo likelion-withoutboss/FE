@@ -72,7 +72,7 @@ export default function MainContent() {
         onHandleSelectSeason={handleSelectedSeason}
       />
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.map((project) => (
           <ArchivingCard
             key={`${project.title}_${project.season}`}
             title={project.title}

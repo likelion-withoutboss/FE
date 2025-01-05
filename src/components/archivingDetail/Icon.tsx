@@ -2,8 +2,7 @@ import { IconType } from "react-icons";
 import cx from "classnames";
 
 interface IconProps {
-  href: string;
-  backgroundColor: string;
+  href?: string;
   icon: IconType;
 }
 
@@ -15,8 +14,7 @@ const Icon = ({ href, icon: IconComponent }: IconProps) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {IconComponent && <IconComponent size="26" />}{" "}
-      {/* IconComponent를 사용하여 아이콘 렌더링 */}
+      {IconComponent && <IconComponent size="26" />}
     </a>
   );
 };

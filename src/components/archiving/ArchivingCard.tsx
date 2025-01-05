@@ -49,13 +49,15 @@ export default function ArchivingCard({
           {skill.map((skillItem, index) => (
             <div
               key={index}
-              className="rounded-lg p-2 bg-gray-200 text-sm text-black w-auto"
+              className="rounded-lg py-2 text-sm text-black w-auto"
             >
-              {skillItem === "react" && <FaReact />}
-              {skillItem === "spring" && <SiSpring />}
-              {skillItem === "nodejs" && <FaNodeJs />}
-              {skillItem === "swift" && <FaSwift />}
-              {skillItem === "django" && <SiDjango />}
+              {skillItem === "react" && <FaReact color="blue" size="22" />}
+              {skillItem === "spring" && <SiSpring color="green" size="22" />}
+              {skillItem === "nodejs" && <FaNodeJs color="green" size="22" />}
+              {skillItem === "swift" && <FaSwift color="orange" size="22" />}
+              {skillItem === "django" && (
+                <SiDjango color=" #006400" size="22" />
+              )}
             </div>
           ))}
         </div>
