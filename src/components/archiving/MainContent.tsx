@@ -1,7 +1,8 @@
 import { useState } from "react";
-import ArchivingCard from "./ArchivingCard";
-import SelectSeason from "./SelectSeason";
+import ArchivingCard from "./ArchivingCard.tsx";
+import SelectSeason from "./SelectSeason.jsx";
 import Title from "../Title.tsx";
+
 export default function MainContent() {
   const projectList = [
     {
@@ -49,9 +50,9 @@ export default function MainContent() {
     },
   ];
 
-  const [selectedSeason, setSelectedSeason] = useState("전체");
+  const [selectedSeason, setSelectedSeason] = useState<string>("전체");
 
-  const handleSelectedSeason = (season) => {
+  const handleSelectedSeason = (season: string) => {
     setSelectedSeason(season);
   };
 
@@ -73,7 +74,7 @@ export default function MainContent() {
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
         {filteredProjects.map((project, index) => (
           <ArchivingCard
-            key={index} // 고유한 키 추가
+            key={`${project.title}_${project.season}`}
             title={project.title}
             description={project.description}
             season={project.season}

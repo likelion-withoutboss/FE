@@ -5,13 +5,21 @@ import cx from "classnames";
 import { FaReact, FaNodeJs, FaSwift } from "react-icons/fa";
 import { SiDjango, SiSpring } from "react-icons/si";
 
+interface ArchivingCardProps {
+  title: string;
+  description: string;
+  season: number;
+  skill: string[];
+  like: boolean;
+}
+
 export default function ArchivingCard({
   title,
   description,
   season,
   skill,
   like,
-}) {
+}: ArchivingCardProps) {
   return (
     <div className="w-80 h-auto p-4 border-2 rounded-2xl space-y-4 shadow-lg bg-white cursor-pointer hover:-translate-y-2 hover:duration-500">
       {/* 프로젝트 소개 */}

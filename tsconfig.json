@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 원하는 ES 버전으로 설정
+    "module": "commonjs", // 모듈 시스템 설정
+    "jsx": "react-jsx", // JSX 설정
+    "esModuleInterop": true, // 추가
+    "allowImportingTsExtensions": true, // 추가
+    "noEmit": true // 또는 "emitDeclarationOnly": true
+  }
+}
